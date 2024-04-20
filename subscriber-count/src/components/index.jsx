@@ -2,11 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faBell } from "@fortawesome/free-solid-svg-icons";
-import Warning from "./Warning";
 export default function Index() {
   return (
     <div className="absolute bottom-0 container mx-auto px-2 bg-red-100 min-h-screen min-w-full flex flex-col justify-center">
-      <Warning />
       <header className="text-center mb-8">
         <h1 className="text-3xl font-bold">Welcome to My React App</h1>
         <p className="text-lg mt-2">This project is made using React Router.</p>

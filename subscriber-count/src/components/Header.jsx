@@ -20,9 +20,9 @@ export default function Header() {
               aria-label="main"
             >
               <ul className="flex justify-evenly">
-                <li href="#search" className="mx-3 hover:opacity-90">
+                <Link to={`search`} className="mx-3 hover:opacity-90">
                   🔎 Search
-                </li>
+                </Link>
                 <li className="mx-3 hover:opacity-90">
                   <Link to={`subscribers`}>Live subs count</Link>
                 </li>

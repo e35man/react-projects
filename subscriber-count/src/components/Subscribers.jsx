@@ -13,21 +13,23 @@ export function SubscriberCount() {
   ];
   return (
     <>
-      <div className="bg-red-100 p-5 max-w-4xl mx-auto min-h-screen">
+      <div className="bg-red-100 p-5 min-h-screen">
         <h2 className="font-bold text-center text-2xl p-2">
           Top 10 Most Subscribed
         </h2>
-        <div className="flex justify-evenly p-5 flex-wrap">
-          {channelIds.map((channelId) => (
-            <iframe
-              key={channelId}
-              className="border border-gray-300 rounded-lg shadow-md mt-2"
-              height="91px"
-              width="310px"
-              src={`https://socialcounts.org/youtube-live-subscriber-count/${channelId}/embed`}
-              allowFullScreen
-            ></iframe>
-
+        <div className="grid md:grid-cols-2 justify-evenly place-items-center ">
+          {channelIds.map((channelId, i) => (
+            <div className="flex bg-red-400 border p-2 rounded-xl shadow-lg">
+              <span className="text-xl my-auto px-2">#{i + 1}</span>
+              <iframe
+                key={channelId}
+                className="border border-gray-300 rounded-lg shadow-md"
+                height="91px"
+                width="310px"
+                src={`https://socialcounts.org/youtube-live-subscriber-count/${channelId}/embed`}
+                allowFullScreen
+              ></iframe>
+            </div>
             // when hovering show actions like "view channel on youtube"
           ))}
         </div>

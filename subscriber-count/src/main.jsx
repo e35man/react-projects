@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App.jsx";
 import ErrorPage from "./error-page";
 import { ViewCount } from "./components/Views";
+import Search from "./components/Search";
 import { SubscriberCount } from "./components/Subscribers";
 import Index from "./components/index";
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Index /> },
+      {
+        path: "search",
+        element: <Search />,
+      },
       {
         path: "subscribers",
         element: <SubscriberCount />,
