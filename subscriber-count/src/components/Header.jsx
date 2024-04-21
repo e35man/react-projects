@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import YTSVG from "../../public/yt-logo.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,11 +15,17 @@ export default function Header() {
 
   return (
     <>
+      {" "}
       <header className="bg-red-600 text-white sticky top-0 z-10">
         <section className="max-w-4xl mx-auto p-4 flex justify-between items-center">
-          <h1 className="text-3xl font-medium">
-            <Link to={`/`}>YouTube Stats</Link>
-          </h1>
+          <span className="flex gap-1">
+            <a href="youtube.com">
+              <img src={YTSVG} alt="youtube logo" width="50" className="shadow-sm"/>
+            </a>
+            <h1 className="text-3xl font-medium">
+              <Link to={`/`}>YouTube Stats</Link>
+            </h1>
+          </span>
           <div>
             <button
               id="hamburger-button"

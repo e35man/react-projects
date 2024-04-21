@@ -13,18 +13,18 @@ export default function Index() {
         <p className="text-lg mb-4">
           Get started by exploring the following sections:
         </p>
-        <nav className="flex flex-wrap gap-2 justify-center">
+        <nav className="flex flex-wrap gap-2 justify-center text-slate-50">
           <Link
             to="/subscribers"
-            className="border p-2  bg-red-200 rounded-lg text-blue-500 hover:opacity-80 font-semibold"
+            className="border p-2 bg-red-500 rounded-lg font-semibold hover:opacity-90"
           >
             <FontAwesomeIcon icon={faBell} /> View Subscriber Count
           </Link>
           <Link
             to="/views"
-            className="border bg-red-200 rounded-lg text-blue-500  p-2 hover:opacity-80 font-semibold"
+            className="border bg-red-500 rounded-lg p-2 font-semibold hover:opacity-90"
           >
-            <FontAwesomeIcon icon={faEye} /> View Video Views Count
+            <FontAwesomeIcon icon={faEye} /> View Video View Count
           </Link>
         </nav>
       </main>
@@ -37,7 +37,7 @@ export default function Index() {
           >
             docs
           </a>{" "}
-          at reactrouter.com .
+          at reactrouter.com
         </p>
       </footer>
     </div>
