@@ -1,4 +1,4 @@
-export function ViewCount() {
+export default function ViewCount() {
   const viewIds = [
     "XqZsoesa55w",
     "kJQP7kiw5Fk",
@@ -17,12 +17,14 @@ export function ViewCount() {
         <h2 className="font-bold text-center text-2xl p-2">
           Top 10 Most Viewed Videos
         </h2>
-        <div className="grid md:grid-cols-2 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 place-items-center">
           {viewIds.map((videoId, i) => (
-            <div className="flex bg-red-400 border p-2 rounded-xl shadow-lg max-w-screen-sm">
-              <span className="text-xl my-auto px-2">#{i + 1}</span>
+            <div
+              key={videoId}
+              className="flex bg-red-500 border p-2 rounded-xl shadow-lg max-w-screen-sm"
+            >
+              <span className="text-xl text-slate-50 my-auto px-0.5 md:px-2">#{i + 1}</span>
               <iframe
-                key={videoId}
                 className="border border-gray-300 rounded-lg shadow-md"
                 height="91px"
                 width="310px"

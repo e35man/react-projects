@@ -1,13 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import React from "react";
 import App from "./App.jsx";
 import ErrorPage from "./error-page";
-import { ViewCount } from "./components/Views";
+import Home from "./components/Home";
+import ReactDOM from "react-dom/client";
 import Search from "./components/Search";
-import { SubscriberCount } from "./components/Subscribers";
-import Index from "./components/index";
+import ViewCount from "./components/Views";
+import SubscriberCount from "./components/Subscribers";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Index /> },
+      { index: true, element: <Home /> },
       {
         path: "search",
         element: <Search />,

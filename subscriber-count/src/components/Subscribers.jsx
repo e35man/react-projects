@@ -1,4 +1,4 @@
-export function SubscriberCount() {
+export default function SubscriberCount() {
   const channelIds = [
     "UCq-Fj5jknLsUf-MWSy4_brA",
     "UCX6OQ3DkcsbYNE6H8uQQuVA",
@@ -13,16 +13,18 @@ export function SubscriberCount() {
   ];
   return (
     <>
-      <div className="bg-red-100 p-5 min-h-screen">
+      <div className="min-h-screen min-w-full container mb-5 bg-red-100 p-5">
         <h2 className="font-bold text-center text-2xl p-2">
           Top 10 Most Subscribed
         </h2>
-        <div className="grid md:grid-cols-2 justify-evenly place-items-center ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 justify-evenly place-items-center ">
           {channelIds.map((channelId, i) => (
-            <div className="flex bg-red-400 border p-2 rounded-xl shadow-lg">
-              <span className="text-xl my-auto px-2">#{i + 1}</span>
+            <div
+              key={channelId}
+              className="flex bg-red-500 border p-2 rounded-xl shadow-lg mx-auto"
+            >
+              <span className="text-xl my-auto px-0.5 md:px-2 text-slate-50">#{i + 1}</span>
               <iframe
-                key={channelId}
                 className="border border-gray-300 rounded-lg shadow-md"
                 height="91px"
                 width="310px"

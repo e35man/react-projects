@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faBell } from "@fortawesome/free-solid-svg-icons";
-export default function Index() {
+export default function Home() {
   return (
     <div className="absolute bottom-0 container mx-auto px-2 bg-red-100 min-h-screen min-w-full flex flex-col justify-center">
       <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
