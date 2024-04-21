@@ -5,24 +5,24 @@ import { faEye, faBell } from "@fortawesome/free-solid-svg-icons";
 export default function Index() {
   return (
     <div className="absolute bottom-0 container mx-auto px-2 bg-red-100 min-h-screen min-w-full flex flex-col justify-center">
-      <header className="text-center mb-8">
-        <h1 className="text-3xl font-bold">Welcome to My React App</h1>
-        <p className="text-lg mt-2">This project is made using React Router.</p>
-      </header>
+      <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
+        Welcome to My React App
+      </h1>
+
       <main className="text-center">
         <p className="text-lg mb-4">
           Get started by exploring the following sections:
         </p>
-        <nav className="flex justify-center space-x-4">
+        <nav className="flex flex-wrap gap-2 justify-center">
           <Link
             to="/subscribers"
-            className="text-blue-500 hover:underline font-semibold"
+            className="border p-2  bg-red-200 rounded-lg text-blue-500 hover:opacity-80 font-semibold"
           >
             <FontAwesomeIcon icon={faBell} /> View Subscriber Count
           </Link>
           <Link
             to="/views"
-            className="text-blue-500 hover:underline font-semibold"
+            className="border bg-red-200 rounded-lg text-blue-500  p-2 hover:opacity-80 font-semibold"
           >
             <FontAwesomeIcon icon={faEye} /> View Video Views Count
           </Link>
@@ -30,20 +30,21 @@ export default function Index() {
       </main>
       <footer className="text-center mt-8">
         <p className="text-sm">
-          For more information, check out{" "}
+          For more information, check out the{" "}
           <a
             href="https://reactrouter.com"
             className="text-blue-500 hover:underline"
           >
-            the docs at reactrouter.com
-          </a>
-          .
+            docs
+          </a>{" "}
+          at reactrouter.com .
         </p>
       </footer>
     </div>
   );
 }
 
+/////////////////// HOW TO USE FA ICONS in REACT //////////////////////
 // STEP 1:
 //  Packages needed for fa icons for react projects
 //  npm i --save @fortawesome/fontawesome-svg-core
@@ -62,3 +63,4 @@ export default function Index() {
 {
   /* <FontAwesomeIcon icon={faEye} */
 }
+///////////////////////////////////////////////////////////////////////

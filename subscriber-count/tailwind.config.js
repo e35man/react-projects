@@ -2,7 +2,22 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        widescreen: { raw: "(min-aspect-ratio: 3/2)" },
+        tailscreen: { raw: "(min-aspect-ratio: 13/20)" },
+      },
+      keyframes: {
+        "open-menu": {
+          "0%": { trasform: "scaleY(0)" },
+          "80%": { trasform: "scaleY(1.2)" },
+          "100%": { trasform: "scaleY(1)" },
+        },
+      },
+      animation: {
+        "open-menu": "open-menu 0.5s ease-in-out forwards",
+      },
+    },
   },
   plugins: [],
 };
